@@ -1,4 +1,4 @@
-FROM szeber/php-soap-base
+FROM shoppinpal/php-soap-base
 
 MAINTAINER Zsolt Szeberenyi <zsolt@szeberenyi.com>
 
