@@ -7,7 +7,7 @@ RUN echo "apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/sh
 
 # Install dotdeb repo, PHP, composer and selected extensions
 RUN apt-get update \
-    && apt-get install -y curl \
+    && apt-get install -y curl git unzip \
     && echo "deb http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/dotdeb.list \
     && curl -sS https://www.dotdeb.org/dotdeb.gpg | apt-key add - \
     && apt-get update \
