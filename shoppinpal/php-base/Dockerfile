@@ -12,7 +12,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get -y --no-install-recommends install curl git unzip php7.1-cli php7.1-fpm php7.1-apcu php7.1-apcu-bc\
         php7.1-curl php7.1-json php7.1-mcrypt php7.1-opcache php7.1-readline php7.1-xdebug php7.1-mysql\
-        php7.1-memcached php7.1-mbstring php7.1-xml mysql-client\
+        php7.1-memcached php7.1-mbstring php7.1-xml mysql-client netcat-openbsd\
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && /usr/local/sbin/repocleanup.sh
 
