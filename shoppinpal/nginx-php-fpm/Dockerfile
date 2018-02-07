@@ -60,11 +60,14 @@ RUN sed -i "/listen = .*/c\listen = [::]:9000" /etc/php/7.1/fpm/pool.d/www.conf 
     && sed -i "/pid = .*/c\;pid = /run/php/php7.1-fpm.pid" /etc/php/7.1/fpm/php-fpm.conf \
     && sed -i "/;daemonize = .*/c\daemonize = no" /etc/php/7.1/fpm/php-fpm.conf \
     && sed -i "/error_log = .*/c\error_log = /proc/self/fd/2" /etc/php/7.1/fpm/php-fpm.conf \
+		&& sed -i "/memory_limit = .*/c\memory_limit = \${PHP_MEMORY_LIMIT}" /etc/php/7.1/fpm/php.ini \
     && usermod -u 1000 www-data
 
 RUN curl -sS http://robo.li/robo.phar -o /usr/local/bin/robo \
     && chmod +x /usr/local/bin/robo
 
 ADD conf/supervisord.conf /etc/supervisor/supervisord.conf
+
+ENV PHP_MEMORY_LIMIT 512M
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
