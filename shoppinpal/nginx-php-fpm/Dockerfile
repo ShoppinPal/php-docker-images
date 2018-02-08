@@ -68,6 +68,6 @@ RUN curl -sS http://robo.li/robo.phar -o /usr/local/bin/robo \
 
 ADD conf/supervisord.conf /etc/supervisor/supervisord.conf
 
-ENV PHP_MEMORY_LIMIT 512M
+ENV PHP_MEMORY_LIMIT 128M
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
