@@ -62,7 +62,7 @@ RUN sed -i "/listen = .*/c\listen = [::]:9000" /etc/php/7.1/fpm/pool.d/www.conf 
     && sed -i "/error_log = .*/c\error_log = /proc/self/fd/2" /etc/php/7.1/fpm/php-fpm.conf \
     && usermod -u 1000 www-data
 
-RUN curl -sS http://robo.li/robo.phar -o /usr/local/bin/robo \
+RUN wget -qO /usr/local/bin/robo http://robo.li/robo.phar \
     && chmod +x /usr/local/bin/robo
 
 ADD conf/supervisord.conf /etc/supervisor/supervisord.conf
