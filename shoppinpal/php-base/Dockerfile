@@ -25,5 +25,5 @@ RUN sed -i "/listen = .*/c\listen = [::]:9000" /etc/php/7.1/fpm/pool.d/www.conf 
     && sed -i "/error_log = .*/c\error_log = /proc/self/fd/2" /etc/php/7.1/fpm/php-fpm.conf \
     && usermod -u 1000 www-data
 
-RUN curl -sS http://robo.li/robo.phar -o /usr/local/bin/robo \
+RUN curl -sS https://robo.li/robo.phar -o /usr/local/bin/robo \
     && chmod +x /usr/local/bin/robo
