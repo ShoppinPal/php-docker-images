@@ -8,6 +8,7 @@ RUN apt-get update \
         gnupg2 \
         mariadb-client \
         netcat-openbsd \
+        unzip \
         zip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
