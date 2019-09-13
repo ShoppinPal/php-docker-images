@@ -5,13 +5,10 @@ MAINTAINER Zsolt Szeberenyi <zsolt@szeberenyi.com>
 RUN apt-get update \
     && apt-get install -y \
         apt-transport-https \
-        git \
         nginx \
         openssl \
-        openssh-client \
         software-properties-common \
         supervisor \
-        unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
