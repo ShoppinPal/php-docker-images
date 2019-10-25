@@ -23,7 +23,14 @@ RUN docker-php-source extract \
     && pecl install \
         memcached \
         oauth \
+        redis \
     && docker-php-ext-enable \
         memcached \
         oauth \
+        redis \
     && docker-php-source delete
+
+ADD install_composer.sh /tmp/install_composer.sh
+
+RUN sh /tmp/install_composer.sh \
+    && rm /tmp/install_composer.sh

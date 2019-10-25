@@ -25,8 +25,3 @@ RUN docker-php-source extract \
     && echo "xdebug.remote_connect_back = 0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.remote_port = 9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.max_nesting_level = 512" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-
-ADD install_composer.sh /tmp/install_composer.sh
-
-RUN sh /tmp/install_composer.sh \
-    && rm /tmp/install_composer.sh
