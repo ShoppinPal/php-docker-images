@@ -3,6 +3,7 @@
 set -e
 
 docker pull ubuntu:xenial
+docker pull mysql:5.7
 docker pull php:7.1-fpm
 docker pull php:7.2-fpm
 docker pull php:7.3-fpm
@@ -10,6 +11,9 @@ docker pull php:7.4-fpm
 docker pull swaggerapi/swagger-codegen-cli-v3:3.0.11
 
 docker build -t shoppinpal/git-ssh shoppinpal/git-ssh
+
+docker build -t shoppinpal/mysql-tmpfs:5.7 shoppinpal/mysql-tmpfs/5.7
+docker tag shoppinpal/mysql-tmpfs:5.7 shoppinpal/mysql-tmpfs:latest
 
 docker build -t shoppinpal/php-fpm:7.1 shoppinpal/php-fpm/7.1
 docker build -t shoppinpal/php-fpm-dev:7.1 shoppinpal/php-fpm-dev/7.1
@@ -36,6 +40,8 @@ docker build -t shoppinpal/php-base shoppinpal/php-base
 docker build -t shoppinpal/php-base-fpm shoppinpal/php-base-fpm
 docker build -t shoppinpal/php-soap-base shoppinpal/php-soap-base
 docker build -t shoppinpal/php-soap-base-fpm shoppinpal/php-soap-base-fpm
+
+docker push shoppinpal/mysql-tmpfs
 
 docker push shoppinpal/php-fpm
 docker push shoppinpal/php-fpm-dev
