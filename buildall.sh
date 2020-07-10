@@ -8,7 +8,7 @@ docker pull php:7.1-fpm
 docker pull php:7.2-fpm
 docker pull php:7.3-fpm
 docker pull php:7.4-fpm
-docker pull swaggerapi/swagger-codegen-cli-v3:3.0.11
+docker pull swaggerapi/swagger-codegen-cli-v3:3.0.20
 
 docker build -t shoppinpal/git-ssh shoppinpal/git-ssh
 
