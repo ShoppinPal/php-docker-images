@@ -9,6 +9,7 @@ RUN apt-get update \
         mariadb-client \
         netcat-openbsd \
         openssh-client \
+        python \
         unzip \
         zip \
     && apt-get clean \
@@ -26,3 +27,13 @@ RUN docker-php-source extract \
     && echo "xdebug.remote_port = 9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.max_nesting_level = 512" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.overload_var_dump = 0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+# Install prestissimo to parallelise composer downloads
+RUN composer global require hirak/prestissimo
+
+RUN mkdir -p /tmp/phpspy \
+    && cd /tmp/phpspy \
+    && git clone https://github.com/adsr/phpspy.git . \
+    && make \
+    && mv /tmp/phpspy/phpspy /usr/local/bin/phpspy \
+    && rm -rf /tmp/phpspy
