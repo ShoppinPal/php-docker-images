@@ -1,4 +1,4 @@
-FROM shoppinpal/php-fpm:7.4
+FROM shoppinpal/php-fpm:8.0
 
 MAINTAINER Zsolt Szeberenyi <zsolt@szeberenyi.com>
 

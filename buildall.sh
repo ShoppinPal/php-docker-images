@@ -8,6 +8,7 @@ docker pull php:7.1-fpm
 docker pull php:7.2-fpm
 docker pull php:7.3-fpm
 docker pull php:7.4-fpm
+docker pull php:8.0-fpm
 docker pull swaggerapi/swagger-codegen-cli-v3:3.0.20
 
 docker build -t shoppinpal/git-ssh shoppinpal/git-ssh
@@ -30,6 +31,10 @@ docker build -t shoppinpal/php-ci:7.3 shoppinpal/php-ci/7.3
 docker build -t shoppinpal/php-fpm:7.4 shoppinpal/php-fpm/7.4
 docker build -t shoppinpal/php-fpm-dev:7.4 shoppinpal/php-fpm-dev/7.4
 docker build -t shoppinpal/php-ci:7.4 shoppinpal/php-ci/7.4
+
+docker build -t shoppinpal/php-fpm:8.0 shoppinpal/php-fpm/8.0
+docker build -t shoppinpal/php-fpm-dev:8.0 shoppinpal/php-fpm-dev/8.0
+docker build -t shoppinpal/php-ci:8.0 shoppinpal/php-ci/8.0
 
 docker build -t shoppinpal/nginx-php-ci shoppinpal/nginx-php-ci
 

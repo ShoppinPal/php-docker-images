@@ -28,9 +28,6 @@ RUN docker-php-source extract \
     && echo "xdebug.max_nesting_level = 512" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.overload_var_dump = 0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
-# Install prestissimo to parallelise composer downloads
-RUN composer global require hirak/prestissimo
-
 RUN mkdir -p /tmp/phpspy \
     && cd /tmp/phpspy \
     && git clone https://github.com/adsr/phpspy.git . \

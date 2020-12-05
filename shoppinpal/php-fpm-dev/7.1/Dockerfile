@@ -16,8 +16,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 RUN docker-php-source extract \
+    && pecl channel-update pecl.php.net \
     && pecl install \
-        xdebug \
+        xdebug-2.9.8 \
     && docker-php-ext-enable \
         xdebug \
     && docker-php-source delete \
@@ -27,9 +28,6 @@ RUN docker-php-source extract \
     && echo "xdebug.remote_port = 9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.max_nesting_level = 512" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.overload_var_dump = 0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-
-# Install prestissimo to parallelise composer downloads
-RUN composer global require hirak/prestissimo
 
 RUN mkdir -p /tmp/phpspy \
     && cd /tmp/phpspy \
