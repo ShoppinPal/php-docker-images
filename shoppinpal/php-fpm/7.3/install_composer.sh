@@ -13,7 +13,7 @@ then
     exit 1
 fi
 
-php composer-setup.php --install-dir=/usr/bin --filename=composer
+php composer-setup.php --1 --install-dir=/usr/bin --filename=composer
 RESULT=$?
 rm composer-setup.php
 exit $RESULT
