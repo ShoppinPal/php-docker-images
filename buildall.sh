@@ -52,6 +52,7 @@ docker build -t shoppinpal/php-soap-base-fpm shoppinpal/php-soap-base-fpm
 docker push shoppinpal/mysql-tmpfs
 
 docker push shoppinpal/php-fpm
+docker push shoppinpal/php-fpm-azure
 docker push shoppinpal/php-fpm-dev
 docker push shoppinpal/php-ci
 
