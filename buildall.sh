@@ -25,14 +25,17 @@ docker build -t shoppinpal/php-fpm-dev:7.2 shoppinpal/php-fpm-dev/7.2
 docker build -t shoppinpal/php-ci:7.2 shoppinpal/php-ci/7.2
 
 docker build -t shoppinpal/php-fpm:7.3 shoppinpal/php-fpm/7.3
+docker build -t shoppinpal/php-fpm-azure:7.3 shoppinpal/php-fpm-azure/7.3
 docker build -t shoppinpal/php-fpm-dev:7.3 shoppinpal/php-fpm-dev/7.3
 docker build -t shoppinpal/php-ci:7.3 shoppinpal/php-ci/7.3
 
 docker build -t shoppinpal/php-fpm:7.4 shoppinpal/php-fpm/7.4
+docker build -t shoppinpal/php-fpm-azure:7.4 shoppinpal/php-fpm-azure/7.4
 docker build -t shoppinpal/php-fpm-dev:7.4 shoppinpal/php-fpm-dev/7.4
 docker build -t shoppinpal/php-ci:7.4 shoppinpal/php-ci/7.4
 
 docker build -t shoppinpal/php-fpm:8.0 shoppinpal/php-fpm/8.0
+docker build -t shoppinpal/php-fpm-azure:8.0 shoppinpal/php-fpm-azure/8.0
 docker build -t shoppinpal/php-fpm-dev:8.0 shoppinpal/php-fpm-dev/8.0
 docker build -t shoppinpal/php-ci:8.0 shoppinpal/php-ci/8.0
 
