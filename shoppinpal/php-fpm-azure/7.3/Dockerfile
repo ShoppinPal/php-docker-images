@@ -7,4 +7,7 @@ RUN docker-php-source extract \
         mysqlnd_azure \
     && docker-php-ext-enable \
         mysqlnd_azure \
-    && docker-php-source delete
+    && docker-php-source delete \
+    && mkdir -p /etc/ssl/mysql
+
+ADD BaltimoreCyberTrustRoot.crt.pem /etc/ssl/mysql/BaltimoreCyberTrustRoot.crt.pem
