@@ -10,7 +10,7 @@ docker pull php:7.3-fpm
 docker pull php:7.4-fpm
 docker pull php:8.0-fpm
 docker pull swaggerapi/swagger-codegen-cli-v3:3.0.20
-docker pull bitnami/fluentd:1.12.1-debian-10-r0
+docker pull bitnami/fluentd:1.12.3-debian-10-r4
 
 docker build -t shoppinpal/git-ssh shoppinpal/git-ssh
 
@@ -44,8 +44,8 @@ docker build -t shoppinpal/nginx-php-ci shoppinpal/nginx-php-ci
 
 docker build -t shoppinpal/swagger-codegen shoppinpal/swagger-codegen
 
-docker build -t shoppinpal/fluentd:1.12.1-debian-10-r0 shoppinpal/fluentd/1.12.1-debian-10-r0
-docker tag shoppinpal/fluentd:1.12.1-debian-10-r0 shoppinpal/fluentd:latest
+docker build -t shoppinpal/fluentd:1.12.3-debian-10-r4 shoppinpal/fluentd/1.12.3-debian-10-r4
+docker tag shoppinpal/fluentd:1.12.3-debian-10-r4 shoppinpal/fluentd:latest
 
 # Deprecated images
 docker build -t shoppinpal/php-base shoppinpal/php-base
@@ -66,7 +66,7 @@ docker push shoppinpal/nginx-php-ci
 docker push shoppinpal/swagger-codegen
 
 docker push shoppinpal/fluentd:latest
-docker push shoppinpal/fluentd:1.12.1-debian-10-r0
+docker push shoppinpal/fluentd:1.12.3-debian-10-r4
 
 # Deprecated images
 docker push shoppinpal/php-base
