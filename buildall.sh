@@ -41,10 +41,18 @@ docker tag shoppinpal/fluentd:1.12.3-debian-10-r4 shoppinpal/fluentd:latest
 
 docker push shoppinpal/mysql-tmpfs
 
-docker push shoppinpal/php-fpm
-docker push shoppinpal/php-fpm-azure
-docker push shoppinpal/php-fpm-dev
-docker push shoppinpal/php-ci
+docker push shoppinpal/php-fpm:7.3
+docker push shoppinpal/php-fpm:7.4
+docker push shoppinpal/php-fpm:8.0
+docker push shoppinpal/php-fpm-azure:7.3
+docker push shoppinpal/php-fpm-azure:7.4
+docker push shoppinpal/php-fpm-azure:8.0
+docker push shoppinpal/php-fpm-dev:7.3
+docker push shoppinpal/php-fpm-dev:7.4
+docker push shoppinpal/php-fpm-dev:8.0
+docker push shoppinpal/php-ci:7.3
+docker push shoppinpal/php-ci:7.4
+docker push shoppinpal/php-ci:8.0
 
 docker push shoppinpal/git-ssh
 docker push shoppinpal/nginx-php-ci

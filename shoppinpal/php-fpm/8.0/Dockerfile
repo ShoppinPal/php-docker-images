@@ -7,6 +7,7 @@ RUN apt-get update \
         libicu-dev \
         libmemcached-dev \
         libpcre3-dev \
+        librdkafka-dev \
         libxml2-dev \
         zlib1g-dev \
     && apt-get clean \
@@ -23,10 +24,12 @@ RUN docker-php-source extract \
     && pecl install \
         memcached \
         oauth \
+        rdkafka \
         redis \
     && docker-php-ext-enable \
         memcached \
         oauth \
+        rdkafka \
         redis \
     && docker-php-source delete
 
