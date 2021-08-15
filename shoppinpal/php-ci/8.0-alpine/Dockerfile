@@ -5,10 +5,9 @@ MAINTAINER Zsolt Szeberenyi <zsolt@szeberenyi.com>
 RUN apk add --no-cache \
         nginx \
         supervisor \
-    && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
-RUN rm /etc/nginx/sites-enabled/* \
+RUN rm -f /etc/nginx/sites-enabled/* \
     && ln -s /etc/nginx/conf.d /etc/nginx/sites-enabled
 
 ADD ./supervisor/*.conf /etc/supervisor/conf.d/
