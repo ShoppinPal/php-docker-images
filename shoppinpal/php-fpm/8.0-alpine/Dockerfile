@@ -31,6 +31,7 @@ RUN apk add --no-cache \
         calendar \
         intl \
         opcache \
+        pcntl \
         pdo_mysql \
         soap \
         zip \
