@@ -2,6 +2,7 @@
 
 set -e
 
+docker pull alpine:latest
 docker pull ubuntu:xenial
 docker pull mysql:5.7
 docker pull php:7.1-fpm
@@ -44,6 +45,8 @@ docker build -t shoppinpal/swagger-codegen shoppinpal/swagger-codegen
 docker build -t shoppinpal/fluentd:1.12.3-debian-10-r4 shoppinpal/fluentd/1.12.3-debian-10-r4
 docker tag shoppinpal/fluentd:1.12.3-debian-10-r4 shoppinpal/fluentd:latest
 
+docker build -t shoppinpal/kubectl-kustomize shoppinpal/kubectl-kustomize
+
 docker push shoppinpal/mysql-tmpfs
 
 docker push shoppinpal/php-fpm:7.3
@@ -69,3 +72,5 @@ docker push shoppinpal/swagger-codegen
 
 docker push shoppinpal/fluentd:latest
 docker push shoppinpal/fluentd:1.12.3-debian-10-r4
+
+docker push shoppinpal/kubectl-kustomize
